@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2>Welcome, {{ current_user.username }}!</h2>
+<p>This is the main dashboard for ModFusion V4.</p>
+<p>Your current role: <strong>{{ current_user.role }}</strong></p>
+<p>Your account is: <strong>{% if current_user.is_approved %}Approved{% else %}Pending Approval{% endif %}</strong></p>
+<p>More features coming soon...</p>
+{% endblock %}
